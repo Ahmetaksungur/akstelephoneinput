@@ -1,0 +1,31 @@
+{
+    "name": "akstelephoneinput",
+    "version": "1.0.0",
+    "description": "International Telephone Numbers",
+    "main": "dist/aksTelephoneInput.min.js",
+    "browser": "dist/aksTelephoneInput.min.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Ahmetaksungur/akstelephoneinput.git"
+    },
+    "keywords": [
+      "jquery International Telephone Numbers",
+      "International Telephone Numbers",
+      "akstelephoneinput",
+      "Telephone Numbers",
+      "International",
+      "flags",
+      "flags input",
+      "aks"
+    ],
+    "author": {
+    "name": "Ahmet Aksungur",
+    "url": "http://ahmetaksungur.com"
+  },
+  "homepage": "https://github.com/Ahmetaksungur/akstelephoneinput#readme",
+  "license": "MIT"
+  
+  }

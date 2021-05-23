@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Aks Telephone Input</title>
+    <link rel="stylesheet" media="screen" href="dist/aksTelephoneInput.css">
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 2rem;
+}
+.aks-input-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+}
+.aks-input-label {
+  margin-left: 0.4rem;
+  cursor:pointer;
+}
+
+.aks-input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 300px;
+  border-radius: 7px;
+  padding: 8px 10px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: unset;
+  position: relative;
+  margin: 0;
+  cursor: text;
+  border: 0.1rem solid #bbc1e1;
+  background: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;  padding-left:57px;
+}
+.aks-input[type="text"]:hover {
+  border-color: #275efe;
+}
+.aks-input[type="text"]:focus {
+  box-shadow: 0 0 0 2px rgba(39, 94, 254, 0.3);
+}
+.aks-input[type="text"]:disabled {
+  background: #f6f8ff;
+  cursor: not-allowed;
+  opacity: 0.9;
+  border-color: #bbc1e1;
+}
+</style>
+</head>
+<body>
+<input class="aks-input" type="text" id="foo" name="aks-telephone-input" value="+90 543 653 2215" /> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="dist/aksTelephoneInput.js"></script>
+    <script>
+ $(function () {
+  $("#foo").aksTelephoneInput({
+  valueNumberCode: false,
+  autoCountry: true,
+  primaryCountries: ["tr","de","fr"],
+  changeCountry: function(){
+    console.log(this);
+  },
+  geoCountries: function(callback) {
+    $.get( "https://ipwhois.app/json/", function( data ) {
+       callback(data.country_code);
+     });
+   }
+    });
+  });
+    </script>
+</body>
+</html>
