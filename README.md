@@ -3,6 +3,9 @@ International Telephone Numbers
 
 **[View the Demo on CodePen &rarr;](https://codepen.io/collection/pggzPE)**
 
+![aksTelephoneInput](https://github.com/Ahmetaksungur/akstelephoneinput/blob/main/8d60f5dfb57b44b19390f654bd07c85513_57_19.gif?raw=true)
+
+
 ## Getting Started
 
 Compiled and production-ready code can be found in the `dist` directory.
