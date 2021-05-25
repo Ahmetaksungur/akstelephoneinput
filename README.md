@@ -86,8 +86,6 @@ $("#tel").aksTelephoneInput({
 
 ### Change Country
 
-**Google Ima 3**
-
 ```html
 <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
 ```
